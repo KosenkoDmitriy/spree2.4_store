@@ -9,6 +9,11 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
+  config.currency = "RUB"
+  config.currency_symbol_position = "after"
+  config.currency_decimal_mark = "."
+  config.currency_thousands_separator = " "
 end
+I18n.default_locale = :ru
 
 Spree.user_class = "Spree::LegacyUser"
