@@ -95,3 +95,10 @@ products.each do |product|
   p.update_attributes(product)
 end
 
+Spree::PaymentMethod::Check.create!(
+    {
+        :name => "Наличными",
+        :description => "Оплата наличными",
+        :active => true
+    }
+)

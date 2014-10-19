@@ -16,7 +16,7 @@ Spree.config do |config|
   #config.available_locales = [:ru, :en]
   #config.supported_locales = [:ru, :en]
 end
-#I18n.default_locale = :ru
+I18n.default_locale = :ru
 SpreeI18n::Config.available_locales = [:ru, :en] # displayed on translation forms
 SpreeI18n::Config.supported_locales = [:ru, :en] # displayed on frontend select box
 
