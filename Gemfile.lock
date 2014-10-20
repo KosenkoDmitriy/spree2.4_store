@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: git://github.com/KosenkoDmitriy/spree_shopomob.git
-  revision: cf43f961c4153638d5c5b2581b7091187d053d45
+  revision: f269ac27a7fd145c974540570c11742fec1d5699
   branch: 2-4-stable
   specs:
     spree_shopomob (2.4.0)
