@@ -35,8 +35,6 @@ ActiveRecord::Schema.define(version: 20141019185454) do
     t.integer  "store_id"
   end
 
-  add_index "spree_abouts", ["store_id"], name: "index_spree_abouts_on_store_id"
-
   create_table "spree_addresses", force: true do |t|
     t.string   "firstname"
     t.string   "lastname"
@@ -158,8 +156,6 @@ ActiveRecord::Schema.define(version: 20141019185454) do
     t.integer  "store_id"
   end
 
-  add_index "spree_contacts", ["store_id"], name: "index_spree_contacts_on_store_id"
-
   create_table "spree_countries", force: true do |t|
     t.string   "iso_name"
     t.string   "iso"
@@ -274,8 +270,6 @@ ActiveRecord::Schema.define(version: 20141019185454) do
     t.datetime "updated_at"
     t.integer  "store_id"
   end
-
-  add_index "spree_news", ["store_id"], name: "index_spree_news_on_store_id"
 
   create_table "spree_option_type_translations", force: true do |t|
     t.integer  "spree_option_type_id"
@@ -882,8 +876,6 @@ ActiveRecord::Schema.define(version: 20141019185454) do
     t.integer  "store_id"
   end
 
-  add_index "spree_sms", ["store_id"], name: "index_spree_sms_on_store_id"
-
   create_table "spree_state_changes", force: true do |t|
     t.string   "name"
     t.string   "previous_state"
@@ -1003,8 +995,6 @@ ActiveRecord::Schema.define(version: 20141019185454) do
     t.datetime "updated_at"
     t.integer  "store_id"
   end
-
-  add_index "spree_syncs", ["store_id"], name: "index_spree_syncs_on_store_id"
 
   create_table "spree_tax_categories", force: true do |t|
     t.string   "name"

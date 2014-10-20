@@ -8,9 +8,12 @@ class AddTenantIdToShopomobModels < ActiveRecord::Migration
         "spree_sms",
         "spree_contacts",
     ]
+    #tables.each do |table|
+    #  add_column table, :store_id, :integer
+    #  add_index table, :store_id
+    #end
     tables.each do |table|
-      add_column table, :store_id, :integer
-      add_index table, :store_id
+      add_column table, :store_id, :integer, index: true
     end
   end
 end

@@ -1,29 +1,4 @@
 GIT
-  remote: git://github.com/KosenkoDmitriy/multitenant.git
-  revision: 831c69ff209714d19e28e0e011ccf2ba44cf1a48
-  branch: 2-4-stable
-  specs:
-    multitenant (0.4.1)
-      activerecord (>= 3.1)
-
-GIT
-  remote: git://github.com/KosenkoDmitriy/spree_multi_tenant.git
-  revision: 50a9e9df29859a74280c96a9372c37c99aa78eb7
-  branch: 2-4-stable
-  specs:
-    spree_multi_tenant (0.4.4)
-      multitenant
-      spree_core (~> 2.4.0.rc3)
-
-GIT
-  remote: git://github.com/KosenkoDmitriy/spree_shopomob.git
-  revision: b8f0c896df06cb2b8075fbd3d10ec2f34b38a337
-  branch: 2-4-stable
-  specs:
-    spree_shopomob (2.4.0)
-      spree_core (~> 2.4.0.rc3)
-
-GIT
   remote: git://github.com/spree/spree.git
   revision: f24cc6cca0ff4d2e55cd166f3a3551a54e947f05
   branch: 2-4-stable
@@ -356,7 +331,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
-  multitenant!
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
@@ -364,8 +338,6 @@ DEPENDENCIES
   spree_auth_devise!
   spree_gateway!
   spree_i18n!
-  spree_multi_tenant!
-  spree_shopomob!
   spring
   sqlite3
   therubyracer
