@@ -41,10 +41,12 @@ gem 'spring',        group: :development
 gem 'spree', github: 'spree/spree', branch: '2-4-stable'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-4-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-4-stable'
-#gem 'spree_i18n', github: 'spree/spree_i18n', branch: '2-4-stable'
 gem 'spree_i18n', github: 'spree/spree_i18n', branch: 'master'
 
+#gem 'spree_multi_tenant', path: '../../spree/spree_repos/spree_multi_tenant_2.4_stable'
+#gem 'spree_shopomob', path: '../../spree/spree_repos/spree_shopomob'
+#gem 'multitenant', path: '../../spree/spree_repos/multitenant'
 
-#gem 'spree', '2.3.4'
-#gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-3-stable'
-#gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-3-stable'
+gem 'spree_shopomob', github: 'KosenkoDmitriy/spree_shopomob', branch: '2-4-stable'
+gem 'spree_multi_tenant', github: 'KosenkoDmitriy/spree_multi_tenant', branch: '2-4-stable'
+gem 'multitenant', github: 'KosenkoDmitriy/multitenant', branch: '2-4-stable'

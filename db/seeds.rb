@@ -9,16 +9,21 @@
 admin=Spree::User.find_by(email:"shopomob@shopomob.ru")
 if admin.blank?
   admin=Spree::User.create!(email:"shopomob@shopomob.ru", password:"123123")
-  admin.spree_roles.create(:name => "admin")
+  admin.spree_roles.create!(:name => "admin")
 end
 
-user=Spree::User.find_by(email:"bond-007-89@mail.ru")
+
+domain="127.0.0.1"
+store=Spree::Store.find_or_create_by!({:url => domain, code:domain, name:domain, mail_from_address:"shopomob@shopomob.ru", default_currency:"RUB"})
+
+
+user=Spree::User.find_by!(email:"bond-007-89@mail.ru")
 if admin.blank?
   user=Spree::User.create!(email:"bond-007-89@mail.ru", password:"123123")
 end
 
 country=Spree::Country.create!(name:"Россия",iso:"RU",iso3:"RUS",iso_name:"Russian Federation")
-state=Spree::State.create(name:"Владикавказ", country:country)
+state=Spree::State.create!(name:"Владикавказ", country:country)
 
 #Spree::Core::Engine.load_seed if defined?(Spree::Core)
 #Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
@@ -31,8 +36,8 @@ state=Spree::State.create(name:"Владикавказ", country:country)
 #Spree::Product.find_or_create_by!({name:"product1", price:10.0, shipping_category:default_shipping_category})
 
 
-russian_zone = Spree::Zone.find_or_create_by(name:"Россия")
-russian_zone.members.create(zoneable:Spree::State.first)
+russian_zone = Spree::Zone.find_or_create_by!(name:"Россия")
+russian_zone.members.create!(zoneable:Spree::State.first)
 shipping_category = Spree::ShippingCategory.find_or_create_by!({name:"По умолчанию"})
 Spree::ShippingMethod.create!([
 {
@@ -99,6 +104,7 @@ Spree::PaymentMethod::Check.create!(
     {
         :name => "Наличными",
         :description => "Оплата наличными",
-        :active => true
+        :active => true,
+        :store=>store
     }
 )
